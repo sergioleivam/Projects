@@ -21,6 +21,10 @@ for count_en, row in enumerate(game):
 # For example, if a function make a sum of values, then the name should be sum. So when we read
 # the code, we intantly know that that function make sums.
 
+game = [[0,0,0],
+        [0,0,0],
+        [0,0,0],]
+
 def game_board():
     # Inside the parenthesis, we list the parameters that would need our new function
     print("  a  b  c")
@@ -30,10 +34,6 @@ def game_board():
     #It is important to note the indentation above
 
 # Now we can make the same game with:
-
-game = [[0,0,0],
-        [0,0,0],
-        [0,0,0],]
 
 game_board()
 
