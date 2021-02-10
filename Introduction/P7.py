@@ -37,3 +37,12 @@ def game_board(player=0, row=0, column=0):
 game_board()
 game_board(player=1,row=2,3)
 game_board(player=1,row=2,column=3)
+
+# Add some conditions to work
+def game_board(player=0, row=0, column=0):
+    print("  a  b  c")
+    if player != 0:
+        game[row][column] = player
+    game[row][column] = player
+    for count_en, row in enumerate(game):
+        print(count_en,row)
