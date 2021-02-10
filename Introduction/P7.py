@@ -2,19 +2,25 @@
 ########   Part 7    ##########
 ###############################
 
+# Examples of functions with parameters
+
+def addition(x,y):
+    return x+y
+
+# We have to be careful because python work without variable previously identify. Python works with dinamics variables
+#  this is very important in cython that kind of mix both python and C 
+
 game = [[0,0,0],
         [0,0,0],
         [0,0,0],]
 
+# We are going to modify our earlier function game_board to include parameters:
 
-def game_board():
+def game_board(player, row, column):
     print("  a  b  c")
     for count_en, row in enumerate(game):
         print(count_en,row)
     
 
-game_board()
-
-game[0][1] = 1
-
+#Even though those parameters are for now useless, the code will fail because it need those values to evaluate the function.
 game_board()
