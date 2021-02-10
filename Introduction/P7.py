@@ -23,4 +23,17 @@ def game_board(player, row, column):
     
 
 #Even though those parameters are for now useless, the code will fail because it need those values to evaluate the function.
-game_board()
+#game_board()
+
+game_board(1,2,3)
+game_board(player=1,row=2,3)
+game_board(player=1,row=2,column=3)
+
+#We can set default values for each parameter so if we call the function without those parameters the function will know what to do.
+
+def game_board(player=0, row=0, column=0):
+    print("  a  b  c")
+    #Set the move
+    game[row][column] = player
+    for count_en, row in enumerate(game):
+        print(count_en,row)
