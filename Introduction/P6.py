@@ -40,3 +40,5 @@ game_board()
 game[0][1] = 1
 
 game_board()
+
+# If we forgot to put the parenthesis i.e. game_board instead of game_board(), the function won't do anything.
