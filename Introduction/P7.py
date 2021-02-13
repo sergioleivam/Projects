@@ -64,3 +64,8 @@ def game_board(player=0, row=0, column=0, just_display=False):
 # Some tests 
 game_board(just_display=True)
 game_board(player=1, row=2, column=1)
+
+# What about having the game defined outside the function
+#  and the function modifying the game, however if we continue 
+#  we are going to find some problems later on like the program is not 
+#  doing what we think it should be doing. More on this in the next part.
