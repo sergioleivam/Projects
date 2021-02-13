@@ -43,7 +43,20 @@ game_board(player=1,row=2,column=3)
 def game_board(player=0, row=0, column=0):
     print("  a  b  c")
     if player != 0:
+        # != means not equal
         game[row][column] = player
+    game[row][column] = player
+    for count_en, row in enumerate(game):
+        print(count_en,row)
+
+# Add a flag to the parameters
+
+def game_board(player=0, row=0, column=0, just_display=False):
+    print("  a  b  c")
+    if not just_display:
+        #It works when just_display is false
+        game[row][column] = player
+        # Therefore, if just_display = True we do not make any changes
     game[row][column] = player
     for count_en, row in enumerate(game):
         print(count_en,row)
