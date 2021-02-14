@@ -12,7 +12,8 @@
 game = [[0,0,0],
         [0,0,0],
         [0,0,0],]
-
+# We can check the id of a certain variable with the built-in function: id()
+print(id(game))
 def game_board(player=0, row=0, column=0, just_display=False):
     print("  a  b  c")
     if not just_display:
@@ -39,7 +40,11 @@ def game_board(player=0, row=0, column=0, just_display=False):
     # However, if we print game inside the function as:
     print(game)
     # We see that it "work"
-    
+    print(id(game))
+
 print(game)
 game_board()
 print(game)
+print(id(game))
+
+# A string is unmutable, so we cannot change it
