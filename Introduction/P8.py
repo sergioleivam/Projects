@@ -99,3 +99,5 @@ def game_board(player=0, row=0, column=0, just_display=False):
 
 game_board()
 print(game)
+# We have modify the variable and change the id as well
+print(id(game))
