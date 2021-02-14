@@ -96,3 +96,6 @@ def game_board(player=0, row=0, column=0, just_display=False):
     game= "A game"
     print(id(game))
     print(game)
+
+game_board()
+print(game)
