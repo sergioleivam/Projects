@@ -63,3 +63,15 @@ def game_board(player=0, row=0, column=0, just_display=False):
 game_board()
 print(game)
 #print(id(game))
+
+# In this case, we do not change the original game and end up printing [1,2,3]
+
+# If we do the same, only this time we set an specifical value of game as:
+
+def game_board(player=0, row=0, column=0, just_display=False):
+    game[1] = 99
+    #print(id(game))
+    print(game)
+
+game_board()
+print(game)
