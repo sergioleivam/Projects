@@ -101,3 +101,22 @@ game_board()
 print(game)
 # We have modify the variable and change the id as well
 print(id(game))
+
+# To avoid that kind of confusion, we can give the variable as a parameter, like
+
+game = [[0,0,0],
+        [0,0,0],
+        [0,0,0],]
+
+def game_board(game_map,player=0, row=0, column=0, just_display=False):
+    print("  a  b  c")
+    if not just_display:
+        game_map[row][column] = player
+    for count_en, row in enumerate(game_map):
+        print(count_en,row)
+
+    return game_map
+
+# We now need to assign a variable equal to the function
+game = game_board(game, just_display=True)
+game = game_board(game, player=1,row=2,column=1)
