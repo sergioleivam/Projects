@@ -50,17 +50,15 @@
 
 # A string is unmutable, so we cannot change it
 
-# If we go back to the final version in P7 
+# If we go back to test with list but inside the function we set a string
 
-game = [[0,0,0],
-        [0,0,0],
-        [0,0,0],]
+game = [1,2,3]
+#print(id(game))
 
 def game_board(player=0, row=0, column=0, just_display=False):
-    print("  a  b  c")
-    if not just_display:
-        game[row][column] = player
-    for count_en, row in enumerate(game):
-        print(count_en,row)
+    game = "A game"
+    #print(id(game))
+    print(game)
 
 game_board()
+#print(id(game))
