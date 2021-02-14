@@ -12,8 +12,7 @@
 game = [[0,0,0],
         [0,0,0],
         [0,0,0],]
-# We can check the id of a certain variable with the built-in function: id()
-print(id(game))
+
 def game_board(player=0, row=0, column=0, just_display=False):
     print("  a  b  c")
     if not just_display:
@@ -33,6 +32,8 @@ print(game)
 # Change the initial game and the function to
 
 game = "I want to play a game"
+# We can check the id of a certain variable with the built-in function: id()
+print(id(game))
 
 def game_board(player=0, row=0, column=0, just_display=False):
     game = "A game"
