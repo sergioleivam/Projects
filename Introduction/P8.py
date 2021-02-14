@@ -21,3 +21,21 @@ def game_board(player=0, row=0, column=0, just_display=False):
         print(count_en,row)
 
 game_board()
+
+# Now we want that function to return the game board, so:
+
+print(game)
+game_board(player=1,row=1,column=1)
+print(game)
+
+
+# Change the initial game and the function to
+
+game = "I want to play a game"
+
+def game_board(player=0, row=0, column=0, just_display=False):
+    game = "A game"
+
+print(game)
+game_board()
+print(game)
