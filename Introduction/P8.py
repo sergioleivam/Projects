@@ -117,6 +117,51 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
 
     return game_map
 
-# We now need to assign a variable equal to the function
+# We now need to assign the variable that we want to modify, equal to the function
 game = game_board(game, just_display=True)
 game = game_board(game, player=1,row=2,column=1)
+
+# This may not be the most efficient way for bigger codes
+#  with more connections or so.
+
+
+##############################
+########   Test     ##########
+##############################
+
+
+x = 1
+def test():
+    x = 2
+test()
+print(x)
+
+
+x = 1
+def test():
+    global x
+    x = 2
+test()
+print(x)
+
+
+x = [1]
+def test():
+    x = [2]
+test()
+print(x)
+
+
+x = [1]
+def test():
+    global x
+    x = [2]
+test()
+print(x)
+
+
+x = [1]
+def test():
+    x[0] = 2
+test()
+print(x)
