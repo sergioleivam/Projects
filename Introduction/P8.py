@@ -79,3 +79,20 @@ def game_board(player=0, row=0, column=0, just_display=False):
 game_board()
 print(game)
 print(id(game))
+
+# We can see that the id's when we mixed strings and lists, are different
+# but if we indicate a direct modification of an element it does not change.
+
+# In the end, if we try to change the whole variable, it won't work.
+
+# The last part here, is that if we go back to
+
+game = "I want to play a game"
+print(id(game))
+
+def game_board(player=0, row=0, column=0, just_display=False):
+    global game
+    # Set the variable "game" to be a global accesible and manipulable, i.e. global value
+    game= "A game"
+    print(id(game))
+    print(game)
