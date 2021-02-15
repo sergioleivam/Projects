@@ -49,4 +49,17 @@ def win(current_game):
         if all_match:
             print("Winner !!!")
 
+#win(game)
+
+# Too long for a simple task. A little secret to programmer is to use google to our advantage, we can look out 
+#  "check if all element in a list python", for example. 
+
+# The solution we can find is using count() or in this case .count()
+
+def win(current_game):
+    for row in game:      # I think it should be current_game but I will check it later
+        print(row)
+        if row.count(row[0]) == len(row): # If the times that the first element is repeated is equal 
+        #                                   to the length that means they are all the same value
+            print("Winner!")
 win(game)
