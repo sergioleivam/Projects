@@ -71,3 +71,8 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
 
 game = game_board(game, just_display=True)
 game = game_board(game, player=1,row=3,column=1)
+
+# What happend if the user or programmer input, for example, game_board instead of game as parameter?
+
+game = game_board(game, just_display=True)
+game = game_board(game_board, player=1,row=3,column=1)
