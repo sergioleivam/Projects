@@ -19,8 +19,8 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
     return game_map
 
 # We now need to assign the variable that we want to modify, equal to the function
-game = game_board(game, just_display=True)
-game = game_board(game, player=1,row=2,column=1)
+# game = game_board(game, just_display=True)
+# game = game_board(game, player=1,row=2,column=1)
 
 # This time, we will study what happen when a possible user make "bad use" of our app or code
 
@@ -42,8 +42,8 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
     except:
         print("something went wrong !!!")
 
-game = game_board(game, just_display=True)
-game = game_board(game, player=1,row=3,column=1)
+# game = game_board(game, just_display=True)
+# game = game_board(game, player=1,row=3,column=1)
 
 # However, with this way, the user does not understand what went wrong so we are not handling the error properly.
 # If you don't know what the error means, you always can look it up in google!.
@@ -69,8 +69,8 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
         print("Error: make sure you input row/column as 0 1 or 2",e)
         # Here e save the specific error from the terminal.
 
-game = game_board(game, just_display=True)
-game = game_board(game, player=1,row=3,column=1)
+# game = game_board(game, just_display=True)
+# game = game_board(game, player=1,row=3,column=1)
 
 # What happend if the user or programmer input, for example, game_board instead of game as parameter?
 
