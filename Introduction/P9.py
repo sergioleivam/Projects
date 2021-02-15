@@ -90,10 +90,19 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
         for count_en, row in enumerate(game_map):
             print(count_en,row)
         return game_map
+
     except IndexError as e:
         print("Error: make sure you input row/column as 0 1 or 2",e)
     except Exception as e:
-        print("Something went very wrong",e)
+        print("Something went very wrong! ",e)
 
 game = game_board(game, just_display=True)
 game = game_board(game_board, player=1,row=3,column=1)
+
+# When we use try:, there are two other statements that we can use:
+# 1) else:
+# 2) finally: 
+# Although we see them rarely. If you want to use them, look them in google or youtube.
+
+# 3) raise: 
+# is also useful to raise an exception of an error
