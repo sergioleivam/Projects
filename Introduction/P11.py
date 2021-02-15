@@ -48,17 +48,31 @@ check = []     # list to check
 
 # This only works if we win with the zeroth column. To keep it as dynamic as possible:
 
+# game = [[2,0,1],
+#         [1,0,1],
+#         [2,2,1],]
+
+# columns = [0,1,2]      # Here we have to change it if we change the dimensions of the game
+
+# for col in columns:
+#     check = []
+
+#     for row in game:
+#         check.append(row[col]) 
+
+#     if check.count(check[col]) == len(check) and check[col] != 0:
+#         print("Winner!")
+
+# We can use len(game) that would be 3 for our case. So:
+
 game = [[2,0,1],
         [1,0,1],
         [2,2,1],]
 
-columns = [0,1,2]
-
-for col in columns:
-    check = []
-
+for col in range(len(game)):    # range is a built-in function (although it is not a function
+    check = []                  #, very useful, that make a list of the a given size and step.
     for row in game:
-        check.append(row[col]) 
-
+        check.append(row[col])
+    
     if check.count(check[col]) == len(check) and check[col] != 0:
         print("Winner!")
