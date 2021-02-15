@@ -74,5 +74,26 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
 
 # What happend if the user or programmer input, for example, game_board instead of game as parameter?
 
+# game = game_board(game, just_display=True)
+# game = game_board(game_board, player=1,row=3,column=1)
+
+# As a programmer we expect that this kind of error does not happend. Both it still can happend.
+# For this kind of situation we can do two things:
+# 1) Add another exception from IndexError
+# 2) Add a general Exception as
+
+def game_board(game_map,player=0, row=0, column=0, just_display=False):
+    try:
+        print("  a  b  c")
+        if not just_display:
+            game_map[row][column] = player
+        for count_en, row in enumerate(game_map):
+            print(count_en,row)
+        return game_map
+    except IndexError as e:
+        print("Error: make sure you input row/column as 0 1 or 2",e)
+    except Exception as e:
+        print("Something went very wrong",e)
+
 game = game_board(game, just_display=True)
 game = game_board(game_board, player=1,row=3,column=1)
