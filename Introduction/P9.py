@@ -45,5 +45,22 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
 game = game_board(game, just_display=True)
 game = game_board(game, player=1,row=3,column=1)
 
-
+# However, with this way, the user does not understand what went wrong so we are not handling the error properly.
 # If you don't know what the error means, you always can look it up in google!.
+
+# Another option is to specify the error, and indicate to the user  
+
+def game_board(game_map,player=0, row=0, column=0, just_display=False):
+    try:
+        print("  a  b  c")
+        if not just_display:
+            game_map[row][column] = player
+        for count_en, row in enumerate(game_map):
+            print(count_en,row)
+        return game_map
+    except IndexError as e:
+        print("Error: make sure you input row/column as 0 1 or 2",e)
+        # Here e save the specific error from the terminal.
+
+game = game_board(game, just_display=True)
+game = game_board(game, player=1,row=3,column=1)
