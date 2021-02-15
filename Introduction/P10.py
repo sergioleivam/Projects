@@ -80,3 +80,5 @@ game = [[1,0,1],
         [2,2,0],]
 
 win(game)
+
+# Next part will be about the other ways to win.
