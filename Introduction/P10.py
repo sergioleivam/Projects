@@ -62,4 +62,16 @@ def win(current_game):
         if row.count(row[0]) == len(row): # If the times that the first element is repeated is equal 
         #                                   to the length that means they are all the same value
             print("Winner!")
+
+#win(game)
+
+# But the game start with all zero's values. To change that, we can add another condition so the elements of
+#  the row are not 0's.
+
+def win(current_game):
+    for row in game:     
+        print(row)
+        if row.count(row[0]) == len(row) and row[0] != 0: 
+            print("Winner!")
+
 win(game)
