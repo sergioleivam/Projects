@@ -52,7 +52,7 @@ game = game_board(game, player=1,row=3,column=1)
 
 print("game is a:  ",type(game))
 
-# Since the last iteration change the variable game to a string we have to create it again
+# Since the last iteration change the variable game to a 'NoneType' we have to create it again
 game = [[0,0,0],
         [0,0,0],
         [0,0,0],]
