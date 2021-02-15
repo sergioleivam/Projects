@@ -74,4 +74,9 @@ def win(current_game):
         if row.count(row[0]) == len(row) and row[0] != 0: 
             print("Winner!")
 
+# Change the original set up to test our earlier change
+game = [[1,0,1],
+        [0,0,0],
+        [2,2,0],]
+
 win(game)
