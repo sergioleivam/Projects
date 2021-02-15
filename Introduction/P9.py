@@ -50,6 +50,13 @@ game = game_board(game, player=1,row=3,column=1)
 
 # Another option is to specify the error, and indicate to the user  
 
+print("game is a:  ",type(game))
+
+# Since the last iteration change the variable game to a string we have to create it again
+game = [[0,0,0],
+        [0,0,0],
+        [0,0,0],]
+
 def game_board(game_map,player=0, row=0, column=0, just_display=False):
     try:
         print("  a  b  c")
