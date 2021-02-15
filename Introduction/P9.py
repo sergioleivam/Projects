@@ -42,5 +42,8 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
     except:
         print("something went wrong !!!")
 
+game = game_board(game, just_display=True)
+game = game_board(game, player=1,row=3,column=1)
+
 
 # If you don't know what the error means, you always can look it up in google!.
