@@ -31,4 +31,14 @@ game = [[2,0,1],
 if game[0][0] == game[1][1] == game[2][2]:
         print("Winner")
 if game[2][0] == game[1][1] == game[0][2]:
-        print("Winne")
+        print("Winner")
+
+# However, we want to be dynamics. We have two different cases, so we can
+# treat them separate. 
+
+# Star by creating a list
+diags = []
+# Fill the diagonal
+for ix in range(len(game)):
+        diags.append(game[ix][ix])
+print(diags)
