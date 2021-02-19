@@ -87,5 +87,10 @@ cols = list(reversed(range(len(game))))
 cols = reversed(range(len(game)))
 rows = range(len(game))
 
-for col, row, in zip(cols,rows):
+for col, row in zip(cols,rows):
+        print(col,row)
+
+# We can "condensed coding" here if we avoid the definition of cols and rows like:
+
+for col, row in zip(reversed(range(len(game))),range(len(game))):
         print(col,row)
