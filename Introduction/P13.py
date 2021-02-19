@@ -82,8 +82,8 @@ while play:  # play = True, we are playing, play = False we have finished the ga
     while not game_won:
         current_player = 1    # We have to come back here to define dynamically which player is playing
         
-        column_choice = input("What column do you want to play? (0, 1, 2)")  # With input we ask the players
-        row_choice = input("What row do you want to play? (0, 1, 2)")  # With input we ask the players
+        column_choice = int(input("What column do you want to play? (0, 1, 2):  "))  # With input we ask the players
+        row_choice = int(input("What row do you want to play? (0, 1, 2):  "))  # The inputs return a string, so we use int()
 
         # Make the move
         game = game_board(game, current_player, column_choice, row_choice)
