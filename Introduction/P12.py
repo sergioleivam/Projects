@@ -63,5 +63,20 @@ print(diags)
 # We will use another built-in function: reversed
 # Let's check it
 
-for i in reversed(range(len(game))):
-        print(i)
+# for i in reversed(range(len(game))):
+#         print(i)
+
+# Create two lists
+cols = reversed(range(len(game)))
+rows = range(len(game))
+
+# This naive implementation will give an error ( range_iterator ), because reversed does not give a list
+# for idx in rows:
+#         print(idx, cols[idx])
+
+# So we define the first list as
+cols = list(reversed(range(len(game))))
+
+# This actually work
+for idx in rows:
+        print(idx, cols[idx])
