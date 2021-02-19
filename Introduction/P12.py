@@ -57,3 +57,11 @@ for ix in range(len(game)):
 print(diags)
 
 # Here we can repeat the code for the vertical win
+
+# Second case
+
+# We will use another built-in function: reversed
+# Let's check it
+
+for i in reversed(range(len(game))):
+        print(i)
