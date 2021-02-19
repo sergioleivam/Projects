@@ -110,3 +110,17 @@ for col, row in enumerate(reversed(range(len(game)))):
         print(col,row)
         diags.append(game[row][col])
 print(diags)
+
+
+# Check a winner
+game = [[2,0,1],
+        [2,2,0],
+        [2,2,2],]
+
+diags = []
+
+for col, row in enumerate(reversed(range(len(game)))):
+        print(col,row)
+        diags.append(game[row][col])
+
+print(diags)
