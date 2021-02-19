@@ -106,10 +106,10 @@ cols = list(reversed(range(len(game))))
 # Star by creating a list
 diags = []
 # Fill the diagonal
-for col, row in enumerate(reversed(range(len(game)))):
-        print(col,row)
-        diags.append(game[row][col])
-print(diags)
+# for col, row in enumerate(reversed(range(len(game)))):
+#         print(col,row)
+#         diags.append(game[row][col])
+# print(diags)
 
 
 # Check a winner
@@ -120,10 +120,12 @@ game = [[2,0,1],
 diags = []
 
 for col, row in enumerate(reversed(range(len(game)))):
-        print(col,row)
         diags.append(game[row][col])
+
+diags = []
 
 for ix in range(len(game)):
         diags.append(game[ix][ix])
 
+print(diags)
 # Full code we need to check diagonal winner
