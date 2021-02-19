@@ -100,3 +100,13 @@ for col, row in enumerate(reversed(range(len(game)))):
         print(col,row)
 
 # In any way, this would work. 
+
+# Returning to the original problem.
+
+# Star by creating a list
+diags = []
+# Fill the diagonal
+for col, row in enumerate(reversed(range(len(game)))):
+        print(col,row)
+        diags.append(game[row][col])
+print(diags)
