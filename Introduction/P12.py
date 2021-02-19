@@ -77,6 +77,15 @@ rows = range(len(game))
 # So we define the first list as
 cols = list(reversed(range(len(game))))
 
-# This actually work
-for idx in rows:
-        print(idx, cols[idx])
+# This actually work, but it is not "elegant"
+# for idx in rows:
+#         print(idx, cols[idx])
+
+# To do our code more readible, we can use another built-in function: zip(). 
+# Now we do not need the list() in cols
+
+cols = reversed(range(len(game)))
+rows = range(len(game))
+
+for col, row, in zip(cols,rows):
+        print(col,row)
