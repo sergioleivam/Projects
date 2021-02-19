@@ -92,5 +92,11 @@ for col, row in zip(cols,rows):
 
 # We can "condensed coding" here if we avoid the definition of cols and rows like:
 
-for col, row in zip(reversed(range(len(game))),range(len(game))):
+# for col, row in zip(reversed(range(len(game))),range(len(game))):
+#         print(col,row)
+
+# We can also do this
+for col, row in enumerate(reversed(range(len(game)))):
         print(col,row)
+
+# In any way, this would work. 
