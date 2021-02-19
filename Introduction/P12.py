@@ -28,10 +28,10 @@ game = [[2,0,1],
 
 # Lets check, hard coding it
 
-if game[0][0] == game[1][1] == game[2][2]:
-        print("Winner")
-if game[2][0] == game[1][1] == game[0][2]:
-        print("Winner")
+# if game[0][0] == game[1][1] == game[2][2]:
+#         print("Winner")
+# if game[2][0] == game[1][1] == game[0][2]:
+#         print("Winner")
 
 # However, we want to be dynamics. We have two different cases, so we can
 # treat them separate. 
@@ -39,9 +39,9 @@ if game[2][0] == game[1][1] == game[0][2]:
 # Star by creating a list
 diags = []
 # Fill the diagonal
-for ix in range(len(game)):
-        diags.append(game[ix][ix])
-print(diags)
+# for ix in range(len(game)):
+#         diags.append(game[ix][ix])
+# print(diags)
 
 
 # Second try, with no winner
@@ -52,9 +52,9 @@ game = [[2,0,1],
 # Star by creating a list
 diags = []
 # Fill the diagonal
-for ix in range(len(game)):
-        diags.append(game[ix][ix])
-print(diags)
+# for ix in range(len(game)):
+#         diags.append(game[ix][ix])
+# print(diags)
 
 # Here we can repeat the code for the vertical win
 
@@ -84,11 +84,11 @@ cols = list(reversed(range(len(game))))
 # To do our code more readible, we can use another built-in function: zip(). 
 # Now we do not need the list() in cols
 
-cols = reversed(range(len(game)))
-rows = range(len(game))
+# cols = reversed(range(len(game)))
+# rows = range(len(game))
 
-for col, row in zip(cols,rows):
-        print(col,row)
+# for col, row in zip(cols,rows):
+#         print(col,row)
 
 # We can "condensed coding" here if we avoid the definition of cols and rows like:
 
@@ -96,8 +96,8 @@ for col, row in zip(cols,rows):
 #         print(col,row)
 
 # We can also do this
-for col, row in enumerate(reversed(range(len(game)))):
-        print(col,row)
+# for col, row in enumerate(reversed(range(len(game)))):
+#         print(col,row)
 
 # In any way, this would work. 
 
@@ -123,4 +123,7 @@ for col, row in enumerate(reversed(range(len(game)))):
         print(col,row)
         diags.append(game[row][col])
 
-print(diags)
+for ix in range(len(game)):
+        diags.append(game[ix][ix])
+
+# Full code we need to check diagonal winner
