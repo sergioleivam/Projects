@@ -89,13 +89,24 @@ while play:  # play = True, we are playing, play = False we have finished the ga
         game = game_board(game, current_player, column_choice, row_choice)
         
 
+# Now we should include a player changing code, a finised game code and others
 
+# 1) Change Players
 
+# It is very useful to look in google some tips to flip, rotate or change values in the list of players
+#  but here we present a solution from the tutorial 
 
+# However, I think with: (for PP in [1,2]:) next from while would do the trick
 
+# In the tutorial, they first do:
 
+players = [1,0]
 
-
+choice = 1
+for i in range(10):
+    current_player = choice +1
+    print(current_player)
+    choice = player[choice]
 
 
 # Test a horizontally win:
