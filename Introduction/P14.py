@@ -158,3 +158,20 @@ while play:
                 print("Not a valid answer, so ... c u l8r aligator")
 
 # Now we can finised the game
+
+# 3) Lack of dynamics of the string "   0  1  2"
+
+# To make dynamics we can separate it into the main values 
+game_size = 3
+print("   0  1  2")
+s = " "  # one space, the initial value of the string
+for i in range(game_size):
+    s += "  "+str(i)
+
+print(s)
+
+# Another option is using .join()
+
+s = "   "+ "  ".join([str(i) for i in range(game_size)])
+
+print(s)
