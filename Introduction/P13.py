@@ -69,7 +69,7 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
 
 # Let's init the game
 
-play = True
+play = False
 players = [1, 2]
 
 while play:  # play = True, we are playing, play = False we have finished the game
@@ -96,7 +96,13 @@ while play:  # play = True, we are playing, play = False we have finished the ga
 # It is very useful to look in google some tips to flip, rotate or change values in the list of players
 #  but here we present a solution from the tutorial 
 
+
+
+
 # However, I think with: (for PP in [1,2]:) next from while would do the trick
+
+
+
 
 # In the tutorial, they first do:
 
@@ -106,7 +112,22 @@ choice = 1
 for i in range(10):
     current_player = choice +1
     print(current_player)
-    choice = player[choice]
+    choice = players[choice]
+
+
+# In the tutorial, the second option is:
+
+import itertools
+
+player_choice = itertools.cycle([1,2])
+
+for i in range(10):
+#    print(player_choice.next())  # Error --> AttributeError: 'itertools.cycle' object has no attribute 'next'
+    print(next(player_choice))
+
+
+
+
 
 
 # Test a horizontally win:
