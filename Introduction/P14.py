@@ -51,7 +51,7 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
 # does not lose the turn.
 
 
-play = True     
+play = False     
 players = [1, 2]
 
 while play:  
@@ -122,3 +122,37 @@ def win(current_game):
     return False
 
 # Add the above changes to the game
+
+play = False     
+players = [1, 2]
+
+while play:  
+    game = [[0,0,0],  
+            [0,0,0],
+            [0,0,0]]
+
+    game_won = False
+    game, _ = game_board(game, just_display=True)  # When we don't care about a variable, we use "_"
+    player_choice = itertools.cycle(players)  
+    while not game_won:
+        current_player = next(player_choice)
+        print(f"Current player: {current_player}")
+        played = False                              # So we can ask if the play is well defined
+
+        while not played:
+            column_choice = int(input("What column do you want to play? (0, 1, 2):  "))  
+            row_choice = int(input("What row do you want to play? (0, 1, 2):  ")) 
+            game, played = game_board(game, current_player, column_choice, row_choice)
+        
+        if win(game):
+            game_won = True
+            again = input("The game is over, would you like to play again? (y/n):  ")
+            if again.lower() == "y":  # If the user use different case of letters, we can use .lower or .upper to modify all
+                print("restarting ")
+            elif again.lower() = "n": # If the first is if work and we define this one as if, it will run it anyways so it is better to use elif that combine an else with an if
+                print("Byeeee ")
+                play = False
+            else:                     # Bad user
+                print("Not a valid answer, so ... c u l8r aligator")
+
+# Now we can finised the game
