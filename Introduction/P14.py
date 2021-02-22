@@ -275,12 +275,12 @@ while play:
     game = [[0 for i in range(game_size)] for i in range(game_size)]
 
     game_won = False
-    game, _ = game_board(game, just_display=True)  # When we don't care about a variable, we use "_"
+    game, _ = game_board(game, just_display=True)  
     player_choice = itertools.cycle(players)  
     while not game_won:
         current_player = next(player_choice)
         print(f"Current player: {current_player}")
-        played = False                              # So we can ask if the play is well defined
+        played = False                            
 
         while not played:
             column_choice = int(input("What column do you want to play? (0, 1, 2):  "))  
@@ -291,11 +291,9 @@ while play:
             game_won = True
             again = input("The game is over, would you like to play again? (y/n):  ")
             if again.lower() == "y":
-                # If the user use different case of letters, we can use .lower or .upper to modify all
                 print("restarting ")
             elif again.lower() == "n":
-                # If the first is if work and we define this one as if, it will run it anyways so it is better to use elif that combine an else with an if
                 print("Byeeee ")
                 play = False
-            else:                     # Bad user
+            else:                 
                 print("Not a valid answer, so ... c u l8r aligator")
