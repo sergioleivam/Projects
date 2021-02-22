@@ -32,20 +32,20 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
     try:
         if game_map[row][column] != 0:
             print("This position is occupado! Choose another")
-            return False
+            return game_map, False
         print("  a  b  c")
         if not just_display:
             game_map[row][column] = player
         for count_en, row in enumerate(game_map):
             print(count_en,row)
-        return game_map
+        return game_map, True
 
     except IndexError as e:
         print("Error: make sure you input row/column as 0 1 or 2",e)
-        return False
+        return game_map, False
     except Exception as e:
         print("Something went very wrong! ",e)
-        return False
+        return game_map, False
 
 # With the False returned when it has been an error or a restricted move, the player
 # does not lose the turn.
@@ -60,7 +60,7 @@ while play:
             [0,0,0]]
 
     game_won = False
-    game = game_board(game, just_display=True)
+    game, _ = game_board(game, just_display=True)  # When we don't care about a variable, we use "_"
     player_choice = itertools.cycle(players)  
     while not game_won:
         current_player = next(player_choice)
@@ -70,6 +70,8 @@ while play:
         while not played:
             column_choice = int(input("What column do you want to play? (0, 1, 2):  "))  
             row_choice = int(input("What row do you want to play? (0, 1, 2):  ")) 
-            game = game_board(game, current_player, column_choice, row_choice)
-            if game:
-                played = True
+            game, played = game_board(game, current_player, column_choice, row_choice)
+            
+# We have a problem that, after a single bad move, the game is now equal to False, which is not what we want
+# To fixed it, we have change what game give as return the
+# Now, it return (game, True/False)
