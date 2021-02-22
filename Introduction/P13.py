@@ -121,10 +121,25 @@ import itertools
 
 player_choice = itertools.cycle([1,2])
 
-for i in range(10):
-#    print(player_choice.next())  # Error --> AttributeError: 'itertools.cycle' object has no attribute 'next'
-    print(next(player_choice))
+# for i in range(10):
+# #    print(player_choice.next())  # Error --> AttributeError: 'itertools.cycle' object has no attribute 'next'
+#     print(next(player_choice))
 
+# Difference between iterable and iterator:
+# 1) iterable: a thing we can iterate over
+# 2) iterator: a special object with next() method. 
+
+# # Examples:
+# import itertools
+# x = [1, 2, 3, 4]  # Iterable.
+# # next(x) does not work
+
+# n = itertools.cycle(x) # Iterator!... also interable
+
+# print(next(n))
+# print(next(n))
+# print(next(n))
+# # It remember the new value. 
 
 
 
