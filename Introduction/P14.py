@@ -266,7 +266,7 @@ for i in range(game_size):
 print(game)
 
 # We also can make the above construction in one line with list comprehension
-
+game_size = int(input("What size game of tic tac toe?:  "))
 game= [[0 for i in range(game_size)] for i in range(game_size)]
 
 print(game)
