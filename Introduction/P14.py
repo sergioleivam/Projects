@@ -75,3 +75,50 @@ while play:
 # We have a problem that, after a single bad move, the game is now equal to False, which is not what we want
 # To fixed it, we have change what game give as return the
 # Now, it return (game, True/False)
+
+# 2) Compactify the win and applying to the game
+
+# We can see that the function win has the same lines repited, so we can define a function that do that.
+
+def win(current_game):
+
+    def all_same(l):
+        if l.count(l[0]) == len(l) and l[0] != 0:
+            return True
+        else:
+            return False
+
+    # Horizontal
+    for row in game:
+        if all_same(row): 
+            print(f"Player {row[0]} is the winner horizontally") 
+            return True
+
+    # Vertical
+    for col in range(len(game)):
+        check = []
+        for row in game:
+            check.append(row[col])
+        
+        if all_same(check):
+            print(f"Player {check[0]} is the winner Verticaly")
+            return True
+
+    # Diagonal
+    diags = []
+    for col, row in enumerate(reversed(range(len(game)))):
+            diags.append(game[row][col])
+    if all_same(diags):
+        print(f"Player {diags[0]} is the winner Diagonaly ( / )")
+        return True
+    diags = []
+    for ix in range(len(game)):
+            diags.append(game[ix][ix])
+    
+    if all_same(diags):
+        print(f"Player {diags[0]} is the winner Diagonaly ( \\ )")
+        return True
+    
+    return False
+
+# Add the above changes to the game
