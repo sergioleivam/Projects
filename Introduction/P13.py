@@ -1,6 +1,7 @@
 ###############################
 ########   Part 13    #########
 ###############################
+import itertools
 
 game = [[2,0,1],
         [1,0,1],
@@ -106,20 +107,20 @@ while play:  # play = True, we are playing, play = False we have finished the ga
 
 # In the tutorial, they first do:
 
-players = [1,0]
+# players = [1,0]
 
-choice = 1
-for i in range(10):
-    current_player = choice +1
-    print(current_player)
-    choice = players[choice]
+# choice = 1
+# for i in range(10):
+#     current_player = choice +1
+#     print(current_player)
+#     choice = players[choice]
 
 
 # In the tutorial, the second option is:
 
-import itertools
+# import itertools
 
-player_choice = itertools.cycle([1,2])
+# player_choice = itertools.cycle([1,2])
 
 # for i in range(10):
 # #    print(player_choice.next())  # Error --> AttributeError: 'itertools.cycle' object has no attribute 'next'
@@ -141,6 +142,29 @@ player_choice = itertools.cycle([1,2])
 # print(next(n))
 # # It remember the new value. 
 
+
+# Back to the program
+
+
+play = True
+players = [1, 2]
+
+while play:  
+    game = [[0,0,0],  
+            [0,0,0],
+            [0,0,0]]
+
+    game_won = False
+    game = game_board(game, just_display=True)
+    player_choice = itertools.cycle([1, 2])  #   New
+    while not game_won:
+        current_player = next(player_choice)
+        print(f"Current player: {current_player}")
+        column_choice = int(input("What column do you want to play? (0, 1, 2):  "))  # With input we ask the players
+        row_choice = int(input("What row do you want to play? (0, 1, 2):  "))  # The inputs return a string, so we use int()
+
+        # Make the move
+        game = game_board(game, current_player, column_choice, row_choice)
 
 
 
