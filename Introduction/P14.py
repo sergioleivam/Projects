@@ -195,7 +195,7 @@ def game_board(game_map,player=0, row=0, column=0, just_display=False):
         print("Something went very wrong! ",e)
         return game_map, False
 
-play = True     
+play = False     
 players = [1, 2]
 
 while play:  
@@ -228,3 +228,26 @@ while play:
                 play = False
             else:                     # Bad user
                 print("Not a valid answer, so ... c u l8r aligator")
+
+# A very useful third party library is numpy 
+# we can install it by: py -3.7 -m pip install numpy
+# in the terminal
+# then in our code we imported it as:
+# import numpy as np
+# And use it like:
+# np.zeros(5)
+# np.zeros((3,3))
+
+# The last part is:  dictionaries
+
+#  Dictionaries is just a way to have keys and values like
+
+dictionaries = {"key1":15, "key2":32}
+
+print(dictionaries["key1"])
+
+# Add another key
+dictionaries["hithere"] = 92
+
+# Ask the whole dictionary
+print(dictionaries)
