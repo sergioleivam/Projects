@@ -147,9 +147,11 @@ while play:
         if win(game):
             game_won = True
             again = input("The game is over, would you like to play again? (y/n):  ")
-            if again.lower() == "y":  # If the user use different case of letters, we can use .lower or .upper to modify all
+            if again.lower() == "y":
+                # If the user use different case of letters, we can use .lower or .upper to modify all
                 print("restarting ")
-            elif again.lower() = "n": # If the first is if work and we define this one as if, it will run it anyways so it is better to use elif that combine an else with an if
+            elif again.lower() == "n":
+                # If the first is if work and we define this one as if, it will run it anyways so it is better to use elif that combine an else with an if
                 print("Byeeee ")
                 play = False
             else:                     # Bad user
