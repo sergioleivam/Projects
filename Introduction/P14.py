@@ -263,6 +263,10 @@ for i in range(game_size):
     for i in range(game_size):
         row.append(0)
     game.append(row)
+print(game)
 
+# We also can make the above construction in one line with list comprehension
+
+game= [[0 for i in range(game_size)] for i in range(game_size)]
 
 print(game)
