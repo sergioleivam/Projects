@@ -238,16 +238,31 @@ while play:
 # np.zeros(5)
 # np.zeros((3,3))
 
-# The last part is:  dictionaries
+# # The last part is:  dictionaries
 
-#  Dictionaries is just a way to have keys and values like
+# #  Dictionaries is just a way to have keys and values like
 
-dictionaries = {"key1":15, "key2":32}
+# dictionaries = {"key1":15, "key2":32}
 
-print(dictionaries["key1"])
+# print(dictionaries["key1"])
 
-# Add another key
-dictionaries["hithere"] = 92
+# # Add another key
+# dictionaries["hithere"] = 92
 
-# Ask the whole dictionary
-print(dictionaries)
+# # Ask the whole dictionary
+# print(dictionaries)
+
+# The important part of the tutorial is over. However, now we are going to make the full game dynamic:
+
+game_size = 5
+
+game = []
+
+for i in range(game_size):
+    row = []
+    for i in range(game_size):
+        row.append(0)
+    game.append(row)
+
+
+print(game)
