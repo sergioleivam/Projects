@@ -29,3 +29,10 @@ df.head()                                                 # See the first n rows
 df.head(3)
 
 df.tail(2)                                                # See the last n rows.
+
+# To reference an specific column, we would do as for a dictiorary
+df["AveragePrice"].head()
+
+# Another, not recommended, syntaxis (do not use it) 
+df.AveragePrice.head()
+
